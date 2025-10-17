@@ -26,6 +26,7 @@ jobs:
           spec: ${{ github.event.inputs.spec }}
         env: 
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          CYPRESS_PROJECT_ID: ${{ secrets.CYPRESS_PROJECT_ID }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   
   cypress-e2e-chrome:
@@ -47,6 +48,7 @@ jobs:
           spec: ${{ github.event.inputs.spec }}
         env: 
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          CYPRESS_PROJECT_ID: ${{ secrets.CYPRESS_PROJECT_ID }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   
   cypress-e2e-firefox:
@@ -68,5 +70,5 @@ jobs:
           spec: ${{ github.event.inputs.spec }}
         env: 
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          CYPRESS_PROJECT_ID: ${{ secrets.CYPRESS_PROJECT_ID }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          TESULTS_TOKEN:  ${{ secrets.TESULTS_TOKEN }}
