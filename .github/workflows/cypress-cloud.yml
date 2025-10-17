@@ -58,6 +58,10 @@ jobs:
     steps:
       - name: Get code
         uses: actions/checkout@v5.0.0
+      - name: Fix permissions
+        run: |
+          mkdir -p /home/node/.cache
+          chmod -R 777 /home/node /tmp
       - name: Cypress run
         uses: cypress-io/github-action@v6.5.0
         with: 
