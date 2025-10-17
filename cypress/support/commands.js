@@ -35,7 +35,7 @@ Cypress.Commands.add('login', (user, pass) => {
         : cy.log('username is null')
 
     pass
-        ? cy.get('[name=pass]').clear().type(pass)
+        ? cy.get('@password').clear().type(pass)
         : cy.log('password is null')
 
     cy.contains('button', 'Entrar').click()
