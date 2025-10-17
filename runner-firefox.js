@@ -4,7 +4,7 @@ const tesults = require('cypress-tesults-reporter');
 const TOKEN_FIREFOX = process.env.TESULTS_TOKEN_FIREFOX;
 
 cypress.run({
-  // specs to run here
+  browser: 'firefox'
 })
 .then((results) => {
   const args = {
