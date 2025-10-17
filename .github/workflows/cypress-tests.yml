@@ -22,3 +22,6 @@ jobs:
 
       - name: Run E2E tests
         run: ${{ github.event.inputs.cli }}
+        env: 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TESULTS_TOKEN:  ${{ secrets.TESULTS_TOKEN }}
