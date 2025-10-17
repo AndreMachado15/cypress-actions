@@ -4,7 +4,7 @@ const tesults = require('cypress-tesults-reporter');
 const TOKEN_ELECTRON = process.env.TESULTS_TOKEN_ELECTRON;
 
 cypress.run({
-  // specs to run here
+  browser: 'electron'
 })
 .then((results) => {
   const args = {
