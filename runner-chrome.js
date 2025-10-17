@@ -4,7 +4,7 @@ const tesults = require('cypress-tesults-reporter');
 const TOKEN_CHROME = process.env.TESULTS_TOKEN_CHROME;
 
 cypress.run({
-  // specs to run here
+  browser: 'chrome'
 })
 .then((results) => {
   const args = {
